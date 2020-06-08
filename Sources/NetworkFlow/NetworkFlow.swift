@@ -12,7 +12,7 @@ public protocol EndpointURLProviding {
 }
 
 public protocol NetworkDataObtaining {
-    func getData<T:Decodable>(for endPointURLProvider : EndpointURLProviding, with completion :@escaping (Result<T,Error>) -> Void)
+    public func getData<T:Decodable>(for endPointURLProvider : EndpointURLProviding, with completion :@escaping (Result<T,Error>) -> Void)
 }
 
 public class NetworkDataFlow : NetworkDataObtaining {
