@@ -17,7 +17,7 @@ public protocol NetworkDataObtaining {
 
 public class NetworkDataFlow : NetworkDataObtaining {
     
-    init() {}
+   public init() {}
     
     //MARK: - This method is in charge of the flow - getting data from the network and parsing it into model data
     public func getData<T:Decodable>(at url: URL, with completion: @escaping (Result<T, Error>) -> Void) {
